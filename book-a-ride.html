@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book a Ride | Corporate Livery</title>
+<meta name="description" content="Book non-emergency medical transportation with Corporate Livery. Fill out the form and our team will be in touch shortly.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to Content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="logo">
+      <span class="logo-mark">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2.6"/><path d="M12 3v6.4M5 16.2l4.8-2.8M19 16.2l-4.8-2.8"/></svg>
+      </span>
+      Corporate Livery
+    </a>
+    <nav class="main-nav" aria-label="Primary">
+      <a href="about-us.html">About Us</a>
+      <a href="book-a-ride.html" class="active">Book a Ride</a>
+    </nav>
+    <a href="book-a-ride.html" class="btn btn-primary">Book a Ride</a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" id="navToggle">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="page-hero">
+    <div class="wrap">
+      <h1>Book a Ride</h1>
+      <p>Interested in a ride? Fill out some info and we will be in touch shortly. We can't wait to hear from you.</p>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="book-layout">
+
+      <div class="contact-card">
+        <h3>Contact Us Directly</h3>
+        <p>Prefer to call or email? Reach our team any time.</p>
+        <div class="contact-line">
+          <span class="icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2F6FE0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z" opacity="0"/><path d="M22 6l-10 7L2 6"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+          </span>
+          info@corporateliveryllc.com
+        </div>
+        <div class="contact-line">
+          <span class="icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2F6FE0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.68 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.32 1.85.55 2.81.68A2 2 0 0 1 22 16.92z"/></svg>
+          </span>
+          (860) 328-6218
+        </div>
+      </div>
+
+      <form class="ride-form" id="rideForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <div class="form-row">
+          <div class="field">
+            <label for="firstName">First Name <span class="req">(required)</span></label>
+            <input type="text" id="firstName" name="firstName" required>
+          </div>
+          <div class="field">
+            <label for="lastName">Last Name <span class="req">(required)</span></label>
+            <input type="text" id="lastName" name="lastName" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="field">
+            <label for="email">Email <span class="req">(required)</span></label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="field">
+            <label for="phone">Phone <span class="req">(required)</span></label>
+            <input type="tel" id="phone" name="phone" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="field">
+            <label for="insurance">Insurance <span class="req">(required)</span></label>
+            <select id="insurance" name="insurance" required>
+              <option value="">Select an option</option>
+              <option value="Medicare">Medicare</option>
+              <option value="Medicaid">Medicaid</option>
+              <option value="Private Pay">Private Pay</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="transportType">Type of Transportation <span class="req">(required)</span></label>
+            <select id="transportType" name="transportType" required>
+              <option value="">Select an option</option>
+              <option value="Wheelchair Accessible">Wheelchair Accessible</option>
+              <option value="Standard Vehicle">Standard Vehicle</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="field">
+            <label for="rideDate">Date</label>
+            <input type="date" id="rideDate" name="rideDate">
+          </div>
+          <div class="field">
+            <label for="rideTime">Time <span class="req">(Eastern Time)</span></label>
+            <input type="time" id="rideTime" name="rideTime">
+          </div>
+        </div>
+
+        <div class="field" style="margin-bottom: 22px;">
+          <label for="message">Message</label>
+          <textarea id="message" name="message"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <p class="form-note">By submitting, you agree to be contacted by Corporate Livery regarding your ride request.</p>
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+      </form>
+
+    </div>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <a href="index.html" class="logo">
+          <span class="logo-mark">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2.6"/><path d="M12 3v6.4M5 16.2l4.8-2.8M19 16.2l-4.8-2.8"/></svg>
+          </span>
+          Corporate Livery
+        </a>
+        <p style="max-width: 34ch; margin-top: 16px;">Safe, comfortable, and on-time non-emergency medical transportation.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="about-us.html">About Us</a></li>
+          <li><a href="book-a-ride.html">Book a Ride</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li>175 Capital Blvd 4th Floor,<br>Rocky Hill, CT, 06067</li>
+          <li>Email: info@corporateliveryllc.com</li>
+          <li>Phone: (860) 328-6218</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Corporate Livery LLC. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
