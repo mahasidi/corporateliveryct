@@ -112,6 +112,8 @@
   }
   .main-nav a:hover { background: var(--mist); }
   .main-nav a.active { background: var(--mist); }
+
+  .nav-book-link { display: none; }
   
   .btn {
     display: inline-flex;
@@ -703,15 +705,7 @@
     .features { margin: 40px 16px; padding: 36px 24px; }
     .cta-banner { margin: 16px 16px 48px; padding: 36px 24px; flex-direction: column; align-items: flex-start; }
     .form-row { grid-template-columns: 1fr; }
-  }
-  
-  @media (prefers-reduced-motion: reduce) {
-    html { scroll-behavior: auto; }
-    .btn:hover { transform: none; }
-  }
 
-  @media (max-width: 860px) {
-    /* existing rules stay as-is, just add these */
     .intro-photo { order: 2; }
     .intro .wrap > div:not(.intro-photo) { order: 1; }
   
@@ -719,5 +713,11 @@
     .intro-photo { aspect-ratio: 16 / 10; }
     .logo { font-size: 1rem; gap: 6px; }
 
+    .nav-book-link { display: block; }
     .site-header .wrap > a.btn-primary { display: none; }
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .btn:hover { transform: none; }
   }
