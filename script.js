@@ -22,8 +22,9 @@ if (navToggle && mainNav) {
   });
 }
 
-// Book a Ride form: submit via fetch so we can show an inline message
+// Book a Ride form: submit via fetch, swap in a success card on the same page
 var rideForm = document.getElementById('rideForm');
+var formSuccess = document.getElementById('formSuccess');
 if (rideForm) {
   rideForm.addEventListener('submit', function (e) {
     e.preventDefault();
@@ -41,19 +42,19 @@ if (rideForm) {
     })
       .then(function (response) {
         if (response.ok) {
-          status.textContent = 'Thanks. Your request is in and our team will reach out shortly.';
-          status.classList.add('success');
           rideForm.reset();
+          rideForm.hidden = true;
+          if (formSuccess) formSuccess.classList.add('is-visible');
         } else {
-          status.textContent = 'Something went wrong. Please call us at (860) 328-6218 instead.';
+          status.textContent = 'Something went wrong. Please call us at (860) 817-4795 instead.';
           status.classList.add('error');
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Submit';
         }
       })
       .catch(function () {
-        status.textContent = 'Something went wrong. Please call us at (860) 328-6218 instead.';
+        status.textContent = 'Something went wrong. Please call us at (860) 817-4795 instead.';
         status.classList.add('error');
-      })
-      .finally(function () {
         submitBtn.disabled = false;
         submitBtn.textContent = 'Submit';
       });

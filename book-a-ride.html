@@ -6,6 +6,7 @@
 <title>Book a Ride | Corporate Livery</title>
 <meta name="description" content="Book non-emergency medical transportation with Corporate Livery. Fill out the form and our team will be in touch shortly.">
 <link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/png" href="images/CorporateLogo.png">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to Content</a>
@@ -14,9 +15,9 @@
   <div class="wrap">
     <a href="index.html" class="logo">
       <span class="logo-mark">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2.6"/><path d="M12 3v6.4M5 16.2l4.8-2.8M19 16.2l-4.8-2.8"/></svg>
+        <img src="images/CorporateLogo.png" alt="Corporate Livery logo">
       </span>
-      Corporate Livery
+      Corporate Livery CT
     </a>
     <nav class="main-nav" aria-label="Primary">
       <a href="index.html">Home</a>
@@ -34,7 +35,7 @@
   <section class="page-hero">
     <div class="wrap">
       <h1>Book a Ride</h1>
-      <p>Interested in a ride? Fill out some info and we will be in touch shortly. We can't wait to hear from you.</p>
+      <p>Ready to schedule a ride? Fill out the form below and our team will reach out shortly.</p>
     </div>
   </section>
 
@@ -46,45 +47,50 @@
         <p>Prefer to call or email? Reach our team any time.</p>
         <div class="contact-line">
           <span class="icon">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2F6FE0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z" opacity="0"/><path d="M22 6l-10 7L2 6"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#58A051" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z" opacity="0"/><path d="M22 6l-10 7L2 6"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
           </span>
-          info@corporateliveryllc.com
+          corporateliveryct@gmail.com
         </div>
         <div class="contact-line">
           <span class="icon">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2F6FE0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.68 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.32 1.85.55 2.81.68A2 2 0 0 1 22 16.92z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#58A051" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.68 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.32 1.85.55 2.81.68A2 2 0 0 1 22 16.92z"/></svg>
           </span>
-          (860) 328-6218
+          (860) 817-4795 | (203) 224-0083
         </div>
       </div>
 
-      <form class="ride-form" id="rideForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <form class="ride-form" id="rideForm" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="bd34dec6-d49e-4015-98a6-b92596a17f97">
+        <input type="hidden" name="subject" value="Ride Request">
+        <input type="hidden" name="from_name" value="CorporateLiveryCT.com">
+        <input type="checkbox" name="botcheck" style="display:none;" tabindex="-1" autocomplete="off">
+
         <div class="form-row">
           <div class="field">
             <label for="firstName">First Name <span class="req">(required)</span></label>
-            <input type="text" id="firstName" name="firstName" required>
+            <input type="text" id="firstName" name="First Name" required>
           </div>
           <div class="field">
             <label for="lastName">Last Name <span class="req">(required)</span></label>
-            <input type="text" id="lastName" name="lastName" required>
+            <input type="text" id="lastName" name="Last Name" required>
           </div>
         </div>
 
         <div class="form-row">
           <div class="field">
             <label for="email">Email <span class="req">(required)</span></label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="Email" required>
           </div>
           <div class="field">
             <label for="phone">Phone <span class="req">(required)</span></label>
-            <input type="tel" id="phone" name="phone" required>
+            <input type="tel" id="phone" name="Phone" required>
           </div>
         </div>
 
         <div class="form-row">
           <div class="field">
             <label for="insurance">Insurance <span class="req">(required)</span></label>
-            <select id="insurance" name="insurance" required>
+            <select id="insurance" name="Insurance" required>
               <option value="">Select an option</option>
               <option value="Medicare">Medicare</option>
               <option value="Medicaid">Medicaid</option>
@@ -94,7 +100,7 @@
           </div>
           <div class="field">
             <label for="transportType">Type of Transportation <span class="req">(required)</span></label>
-            <select id="transportType" name="transportType" required>
+            <select id="transportType" name="Transport Type" required>
               <option value="">Select an option</option>
               <option value="Wheelchair Accessible">Wheelchair Accessible</option>
               <option value="Standard Vehicle">Standard Vehicle</option>
@@ -105,23 +111,31 @@
         <div class="form-row">
           <div class="field">
             <label for="rideDate">Date</label>
-            <input type="date" id="rideDate" name="rideDate">
+            <input type="date" id="rideDate" name="Ride Date">
           </div>
           <div class="field">
             <label for="rideTime">Time <span class="req">(Eastern Time)</span></label>
-            <input type="time" id="rideTime" name="rideTime">
+            <input type="time" id="rideTime" name="Ride Time (24 hrs)">
           </div>
         </div>
 
         <div class="field" style="margin-bottom: 22px;">
-          <label for="message">Message</label>
-          <textarea id="message" name="message"></textarea>
+          <label for="message">Additional Details</label>
+          <textarea id="message" name="Additional Details"></textarea>
         </div>
 
         <button type="submit" class="btn btn-primary">Submit</button>
         <p class="form-note">By submitting, you agree to be contacted by Corporate Livery regarding your ride request.</p>
         <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
       </form>
+
+      <div class="form-success" id="formSuccess">
+        <div class="form-success-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+        </div>
+        <h3>Request Received</h3>
+        <p>Thanks, we've got your ride details! A member of our team will call or email you shortly to confirm.</p>
+      </div>
 
     </div>
   </div>
@@ -134,7 +148,7 @@
       <div>
         <a href="index.html" class="logo">
           <span class="logo-mark">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2.6"/><path d="M12 3v6.4M5 16.2l4.8-2.8M19 16.2l-4.8-2.8"/></svg>
+            <img src="images/CorporateLogo.png" alt="Corporate Livery logo">
           </span>
           Corporate Livery
         </a>
@@ -150,14 +164,11 @@
       <div class="footer-col">
         <h4>Contact</h4>
         <ul>
-          <li>175 Capital Blvd 4th Floor,<br>Rocky Hill, CT, 06067</li>
-          <li>Email: info@corporateliveryllc.com</li>
-          <li>Phone: (860) 328-6218</li>
+          <li>Email: corporateliveryct@gmail.com</li>
+          <li>Phone: (860) 817-4795</li>
+          <li>Alt Phone: (203) 224-0083</li>
         </ul>
       </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© <span id="year"></span> Corporate Livery LLC. All rights reserved.</span>
     </div>
   </div>
 </footer>

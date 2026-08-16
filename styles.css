@@ -8,9 +8,9 @@
     --line: #E4E6EA;
     --muted: #6B7178;
   
-    --accent: #2F6FE0;
-    --accent-dark: #2457B8;
-    --accent-soft: #EAF1FD;
+    --accent: #58A051;
+    --accent-dark: #467E40;
+    --accent-soft: #eff8ef;
   
     --radius-lg: 32px;
     --radius-md: 20px;
@@ -93,7 +93,6 @@
     width: 30px;
     height: 30px;
     border-radius: 9px;
-    background: var(--ink);
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -314,6 +313,18 @@
     font-weight: 700;
     color: var(--accent-dark);
   }
+
+  .intro-photo {
+    border-radius: var(--radius-md);
+    aspect-ratio: 5 / 4;
+    overflow: hidden;
+  }
+  .intro-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
   
   .stat-row {
     display: grid;
@@ -448,6 +459,7 @@
     letter-spacing: -0.02em;
     margin: 0;
     max-width: 30ch;
+    color: var(--ink);
   }
   
   /* ============================================
@@ -463,10 +475,8 @@
     grid-template-columns: 1.4fr 1fr 1fr;
     gap: 32px;
     padding-bottom: 32px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
   }
   .footer-top .logo { color: #fff; }
-  .footer-top .logo-mark { background: rgba(255, 255, 255, 0.15); }
   .footer-col h4 {
     color: #fff;
     font-size: 0.85rem;
@@ -538,6 +548,18 @@
     margin: 0 0 12px;
   }
   .about-row .img-placeholder { aspect-ratio: 4 / 3; }
+
+  .about-photo {
+    border-radius: var(--radius-md);
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+  }
+  .about-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
   
   /* ============================================
      Book a Ride form
@@ -564,6 +586,7 @@
     font-weight: 600;
     font-size: 0.95rem;
   }
+
   .contact-line .icon {
     width: 38px;
     height: 38px;
@@ -623,6 +646,39 @@
   }
   .form-status.success { color: #157F3B; }
   .form-status.error { color: #C0392B; }
+
+  .form-success {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    padding: 56px 36px;
+  }
+  .form-success.is-visible {
+    display: flex;
+  }
+  .form-success-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 6px;
+  }
+  .form-success h3 {
+    font-size: 1.3rem;
+    margin: 0;
+  }
+  .form-success p {
+    color: var(--muted);
+    max-width: 38ch;
+    margin: 0;
+  }
   
   /* ============================================
      Responsive
@@ -652,4 +708,16 @@
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
     .btn:hover { transform: none; }
+  }
+
+  @media (max-width: 860px) {
+    /* existing rules stay as-is, just add these */
+    .intro-photo { order: 2; }
+    .intro .wrap > div:not(.intro-photo) { order: 1; }
+  
+    .hero-visual { aspect-ratio: 16 / 10; }
+    .intro-photo { aspect-ratio: 16 / 10; }
+    .logo { font-size: 1rem; gap: 6px; }
+
+    .site-header .wrap > a.btn-primary { display: none; }
   }
